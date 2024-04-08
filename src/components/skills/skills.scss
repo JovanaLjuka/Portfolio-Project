@@ -1,0 +1,16 @@
+.skills {
+  height: 10%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  img {
+    padding: 15px;
+    width: 90px;
+    height: 90px;
+    position: center;
+  }
+}

@@ -11,20 +11,13 @@
     height: 100%;
   }
 
-  h1 {
-    margin-left: 2.5rem;
-    font-weight: bold;
-    font-size: 2rem;
-  }
-
   .social {
     display: flex;
     gap: 20px;
 
     img {
-      width: 25px;
-      height: 25px;
-      color: rgb(32, 32, 32);
+      width: 30px;
+      height: 30px;
     }
   }
 }

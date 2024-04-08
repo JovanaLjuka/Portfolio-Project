@@ -1,0 +1,44 @@
+.about {
+  padding: 16px;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+
+  h1 {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+
+  .wrapper {
+    background: rgba(0, 0, 0, 0.3);
+    max-width: 770px;
+    padding: 30px;
+    border-radius: 10px;
+    height: auto;
+    text-align: justify;
+
+    p {
+      font-size: 1.2em;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 50px;
+
+    button {
+      padding: 20px;
+      border: 1px solid rgb(102, 51, 153);
+      border-radius: 10px;
+      background-color: transparent;
+      color: rgb(102, 51, 153);
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
