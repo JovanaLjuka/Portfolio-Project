@@ -34,14 +34,22 @@ const Hero = () => {
           initial='initial'
           animate='animate'
         >
-          <motion.h2 variants={textVariants}>Hello I'm Jovana Ljuka</motion.h2>
+          <motion.h2 variants={textVariants}>Hello, I'm Jovana Ljuka</motion.h2>
           <motion.h1 variants={textVariants}>Front-end Developer</motion.h1>
           <motion.div className='btns' variants={textVariants}>
-            <motion.button variants={textVariants} whileHover={{ scale: 1.1 }}>
-              See the Latest Projects
+            <motion.button
+              variants={textVariants}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+            >
+              <a href='#Projects'>See the Latest Projects</a>
             </motion.button>
-            <motion.button variants={textVariants} whileHover={{ scale: 1.1 }}>
-              Contact Me
+            <motion.button
+              variants={textVariants}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+            >
+              <a href='#Contact'>Contact Me</a>
             </motion.button>
           </motion.div>
           <motion.img

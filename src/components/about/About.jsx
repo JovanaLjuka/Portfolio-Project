@@ -18,21 +18,26 @@ const About = () => {
       <div className='buttons'>
         <div>
           <a href='/Previous.pdf'>
-            <motion.button whileHover={{ scale: 1.1 }}>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+            >
               Get to know my former career
             </motion.button>
           </a>
         </div>
         <div>
           <a href='/Resume.pdf'>
-            <motion.button whileHover={{ scale: 1.1 }}>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+            >
               Download my Resume
             </motion.button>
           </a>
         </div>
       </div>
 
-      <p>Based in Belgrade, Serbia. 📍</p>
       <Skills />
     </div>
   )

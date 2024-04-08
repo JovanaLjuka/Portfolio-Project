@@ -10,13 +10,13 @@ const Navbar = () => {
 
         <ul className='social'>
           <li>
-            <a href='https://www.linkedin.com/in/jovana-ljuka-8280b5157/'>
-              <img src='/li.png' alt='linkedin' />
+            <a href='https://github.com/JovanaLjuka'>
+              <img src='/gh.png' alt='linkedin' />
             </a>
           </li>
           <li>
-            <a href='https://github.com/JovanaLjuka'>
-              <img src='/gh.png' alt='linkedin' />
+            <a href='https://www.linkedin.com/in/jovana-ljuka-8280b5157/'>
+              <img src='/lin.svg' alt='linkedin' />
             </a>
           </li>
         </ul>

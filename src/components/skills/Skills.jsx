@@ -31,7 +31,7 @@ const Skills = () => {
   return (
     <div className='skills'>
       {icons.map((icon, index) => {
-        return <img src={icon} alt={icon} />
+        return <img src={icon} alt={icon} key={index} />
       })}
     </div>
   )
