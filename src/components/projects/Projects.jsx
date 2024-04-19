@@ -1,9 +1,27 @@
 import './projects.scss'
 import { projects } from '../../data'
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const Single = ({ project }) => {
+  const [hoverAnimation, setHoverAnimation] = useState({})
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setHoverAnimation({ scale: 1.5, x: 100, z: -1 })
+      } else {
+        setHoverAnimation({})
+      }
+    }
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   const { image, title, url, github, text } = project
   const ref = useRef()
 
@@ -18,11 +36,7 @@ const Single = ({ project }) => {
       <div className='container'>
         <div className='wrapper'>
           <div className='img-container'>
-            <motion.img
-              src={image}
-              alt={title}
-              whileHover={{ scale: 1.5, x: 100, z: -1 }}
-            />
+            <motion.img src={image} alt={title} whileHover={hoverAnimation} />
           </div>
           <motion.div className='text-container' style={{ y }}>
             <h2>{title}</h2>

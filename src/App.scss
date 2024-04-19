@@ -1,7 +1,27 @@
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  height: fit-content;
 }
+
+::-webkit-scrollbar {
+  width: 1em;
+  height: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(200 43% 55% / 1);
+}
+::-webkit-scrollbar-track:horizontal {
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(200 43% 85% / 1);
+}
+::-webkit-scrollbar-thumb:horizontal {
+  border-radius: 100vw;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -25,6 +45,34 @@ ul {
   list-style-type: none;
 }
 section {
-  height: 100vh;
   scroll-snap-align: center;
+  overflow: hidden;
+}
+// section {
+//   height: 100vh;
+
+//   @media (max-width: 768px) {
+//     height: 400px;
+//   }
+// }
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: 1366px) {
+    @content;
+  }
 }
